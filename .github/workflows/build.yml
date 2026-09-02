@@ -1,0 +1,32 @@
+name: Compilation du mémoire
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compiler le mémoire
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: "Mémoire MAE.tex"
+          # glossaries-extra est chargé par tnreport.cls avec automake=immediate,
+          # qui appelle makeglossaries : il faut donc l'échappement shell.
+          latexmk_shell_escape: true
+          # latexmk enchaîne automatiquement pdflatex, bibtex et les passes
+          # nécessaires à la résolution des références et des tables des matières.
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+
+      - name: Publier le PDF
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: memoire-pdf
+          path: "Mémoire MAE.pdf"
+          if-no-files-found: error
