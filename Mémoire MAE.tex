@@ -1,192 +1,224 @@
-\documentclass[stage3a]{tnreport}
-% \documentclass[confidential]{tnreport} % À activer si ton mémoire chez Wavestone est confidentiel
+% ==============================================================================
+% MÉMOIRE PROFESSIONNEL — MASTER 2 MAE — IAE NANCY
+% Arthur SAUNIER — Wavestone Luxembourg — 2025-2026
+%
+% Classe tnreport (TELECOM Nancy) réutilisée pour la mise en forme UNIQUEMENT.
+% Toutes les macros propres au rapport d'ingénieur (page de titre Télécom,
+% seconde page de titre, page de signatures) ne sont volontairement PAS appelées :
+% la page de garde suit le modèle imposé par l'IAE (cf. \makeIAEtitle ci-dessous).
+% ==============================================================================
+
+\documentclass{tnreport}
+% Option [stage3a] retirée : elle ne servait qu'à la page de titre Télécom.
+% \documentclass[confidential]{tnreport} % à activer si le mémoire est confidentiel
+
+% ------------------------------------------------------------------ conformité IAE
+\usepackage{setspace}
+\onehalfspacing                      % interligne 1,5 (consigne IAE)
+% \renewcommand{\rmdefault}{ptm}     % décommenter pour du Times à la place de Libertine
+
+% etoc autorise plusieurs tables des matières dans un même document :
+% sommaire d'une page au début, table détaillée à la fin (consigne IAE).
+\usepackage{etoc}
+
+\setcounter{secnumdepth}{3}          % sous-sous-sections numérotées
+\setcounter{tocdepth}{2}
 
 % ==============================================================================
-% METADONNÉES DU MÉMOIRE (IAE & TELECOM Nancy)
+% MÉTADONNÉES
 % ==============================================================================
-\def\reportTitle{L'intégration de l'IA générative dans le conseil} 
-\def\reportLongTitle{L'intégration des outils d'intelligence artificielle générative dans le conseil : comment l'automatisation des tâches d'analyse redéfinit-elle la légitimité et le développement des compétences des consultants ?} 
+\def\reportTitle{L'intégration de l'IA générative dans le conseil}
+\def\reportLongTitle{L'intégration des outils d'intelligence artificielle générative dans le conseil : comment l'automatisation des tâches d'analyse redéfinit-elle la légitimité et le développement des compétences des consultants ?}
 
 \def\reportAuthor{Arthur SAUNIER}
-\def\reportAuthorEmail{\email{arthur.saunier@telecomnancy.eu}} % Ton mail étudiant
+\def\reportAuthorEmail{\email{arthur.saunier@telecomnancy.net}}
 
-% Configuration de l'adresse (Optionnel, à remplir ou laisser vide)
-\def\reportAuthorAddress{} 
-\def\reportAuthorCity{} 
-\def\reportAuthorPhone{} 
+\def\reportSupervisor{M. Riccardo BERGAMASCHI}        % tuteur professionnel
+\def\reportAcademicSupervisor{M. Ferri BRIQUET}       % tuteur pédagogique IAE
+\def\reportCompany{Wavestone Luxembourg}
+\def\reportCompanyCity{Luxembourg}
 
-% Encadrement
-\def\reportSupervisor{M. Riccardo BERGAMASCHI} % Tuteur professionnel Wavestone
-\def\reportAcademicSupervisor{M. Ferri BRIQUET} % Tuteur académique IAE Nancy
+\def\place{Nancy}                                     % engagement anti-plagiat
+\def\date{\today}
 
-% Informations Entreprise
-\def\reportCompany{Wavestone Luxembourg} 
-\def\reportCompanyAddress{}  
-\def\reportCompanyCity{Luxembourg} 
-\def\reportCompanyPhone{} 
-\def\reportCompanyLogoPath{figures/company-logo} % Ton logo Wavestone dans le dossier figures
-
-\def\place{Nancy} % Ville pour l'engagement anti-plagiat
-\def\date{\today} 
-
-% Ligne de signatures réglementaire de fin de document
-\addSignaturesLine{{
-  {figures/school-logo}{Arthur SAUNIER}{Élève-Ingénieur \& Étudiant MAE},
-  {figures/company-logo}{Riccardo BERGAMASCHI}{Tuteur Professionnel}
-}}
-\addSignaturesLine{{
-  {figures/school-logo}{Ferri BRIQUET}{Tuteur Pédagogique IAE}
-}}
+% Éléments propres à la page de garde IAE
+\def\iaeSchool{IAE Nancy --- School of Management}
+\def\iaeUniversity{Université de Lorraine}
+\def\iaeYear{Année universitaire 2025-2026}
+\def\iaeDiploma{Master 2 Management Administration des Entreprises}
+\def\iaeEngSchool{TELECOM Nancy}
+\def\iaeDate{Septembre 2026}
 
 % ==============================================================================
-% DÉBUT DU DOCUMENT
+% PAGE DE GARDE AU FORMAT IMPOSÉ PAR L'IAE
+% (remplace le \maketitle de la classe, qui produit la couverture Télécom)
+% ==============================================================================
+\newcommand{\makeIAEtitle}{%
+  \begin{titlepage}
+    \thispagestyle{empty}
+    \begin{center}
+      {\large \iaeSchool}\\[0.3cm]
+      {\large \iaeUniversity}\\[0.3cm]
+      {\large \iaeYear}
+
+      \vspace{1.2cm}
+      % Logos facultatifs — commenter les deux lignes si les fichiers sont absents
+      \includegraphics[height=2.2cm]{figures/school-logo}
+      \hspace{1.5cm}
+      \includegraphics[height=2.2cm]{figures/company-logo}
+
+      \vfill
+
+      {\Large \textbf{Mémoire professionnel}}\\[0.5cm]
+      {\large en vue de l'obtention du}\\[0.3cm]
+      {\Large \textbf{\iaeDiploma}}
+
+      \vspace{1.6cm}
+      \rule{0.85\textwidth}{0.8pt}\\[0.7cm]
+      {\LARGE \textbf{\reportLongTitle}}\\[0.7cm]
+      \rule{0.85\textwidth}{0.8pt}
+
+      \vfill
+
+      {\large présenté par}\\[0.3cm]
+      {\Large \textbf{\reportAuthor}}\\[0.3cm]
+      {\large (\iaeEngSchool)}
+
+      \vspace{1.2cm}
+      {\large \iaeDate}
+
+      \vspace{1.2cm}
+      \begin{minipage}{0.8\textwidth}\centering
+        Tuteur pédagogique : \reportAcademicSupervisor\\
+        Tuteur professionnel : \reportSupervisor{} --- \reportCompany
+      \end{minipage}
+    \end{center}
+  \end{titlepage}
+}
+
 % ==============================================================================
 \begin{document}
 
-\maketitle
+\makeIAEtitle
 \pagenumbering{roman}
 
-% Engagement anti-plagiat (Remplacer avec ton numéro étudiant et ta signature){figures/ta_signature}
-\insertAntiPlagiarismAgreement{Saunier, Arthur}{eouorjier}{0.2}
-\cleardoublepage{}
+% Déclaration de non-plagiat — texte Université de Lorraine, donc valable ici.
+% ATTENTION : la macro attend QUATRE arguments :
+%   {Nom, Prénom}{numéro de carte étudiante}{chemin de l'image de signature}{échelle}
+% \insertAntiPlagiarismAgreement{Saunier, Arthur}{VOTRE-NUMERO-ETUDIANT}{figures/signature}{0.2}
 
-%\makesecondtitle{}
-
-% ==============================================================================
-% REMERCIEMENTS
-% ==============================================================================
+% ------------------------------------------------------------------ Remerciements
 \section*{Remerciements}
 \addcontentsline{toc}{chapter}{Remerciements}
 
-Je tiens à remercier tout particulièrement... % À compléter plus tard
+Je tiens à remercier tout particulièrement... % À compléter
 
 \cleardoublepage{}
 
-% ==============================================================================
-% TABLE DES MATIÈRES (Sommaire synthétique obligatoire pour l'IAE)
-% ==============================================================================
-\renewcommand{\baselinestretch}{0.5}\normalsize
+% ------------------------------------------------------------------ Sommaire (1 page)
+% Consigne IAE : sommaire synthétique en une page au début, table détaillée à la fin.
+\begin{spacing}{1}                   % interligne simple pour tenir sur une page
+\etocsetnexttocdepth{0}              % parties et chapitres seulement
 \tableofcontents
-\renewcommand{\baselinestretch}{1.0}\normalsize
+\end{spacing}
 \cleardoublepage{}
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
 % ==============================================================================
-% INTRODUCTION GENERALE (Validée ensemble)
+% INTRODUCTION GÉNÉRALE
 % ==============================================================================
-\chapter{Introduction Générale}
-
-\section{Contexte sectoriel : Le conseil à l'ère de l'intelligence artificielle}
-Le secteur du conseil en stratégie et en management traverse une période de mutation technologique sans précédent. Historiquement définies comme des \textit{Knowledge-Intensive Firms} (KIFs), les entreprises de conseil tirent leur valeur ajoutée de la capacité de leurs collaborateurs à collecter, analyser et synthétiser des informations complexes pour éclairer la prise de décision des dirigeants. 
-
-L'émergence et la démocratisation fulgurante des outils d'intelligence artificielle générative depuis la fin de l'année 2022 sont venues bousculer ce modèle économique et opérationnel. Des tâches autrefois dévolues aux consultants juniors, telles que la revue documentaire, la synthèse de rapports sectoriels ou la première formulation de recommandations, peuvent désormais être automatisées ou fortement accélérées par des modèles de langage de grande taille (LLM). 
-
-Cette transformation technologique offre des opportunités majeures en termes d'efficience opérationnelle et de gain de productivité pour les cabinets. Toutefois, elle soulève des questionnements managériaux profonds. D'une part, l'automatisation des tâches d'analyse de bas niveau risque d'altérer le processus traditionnel d'apprentissage et de développement des compétences des collaborateurs en début de carrière. D'autre part, la récurrence des biais algorithmiques et des hallucinations informationnelles pose un risque de réputation et de responsabilité juridique majeur pour des structures dont la "confiance" constitue le principal actif immatériel.
-
-\section{Présentation du cadre de l'étude : Wavestone Luxembourg}
-C'est au cœur de cette dynamique que s'inscrit ce travail de recherche, mené dans le cadre d'un stage de fin d'études au sein du cabinet Wavestone Luxembourg. Acteur majeur du conseil en transformation digitale et en cybersécurité, Wavestone constitue un terrain d'observation privilégié pour analyser la dualité de l'intégration de l'IA. En tant que consultant au sein de la practice Cybersécurité, confronté quotidiennement à l'intensité des missions de gestion de crise et d'évaluation de la maturité des organisations, l'opportunité nous est donnée d'observer directement la manière dont les équipes s'approprient — ou rejettent — ces nouveaux outils transformationnels.
-
-\section{Énoncé de la problématique}
-Face à ce constat, l'objectif de ce mémoire professionnel n'est pas d'analyser le processus technique de développement des outils d'IA, mais bien d'en étudier les impacts organisationnels et managériaux[cite: 2]. Il s'agit de comprendre comment l'organisation navigue entre l'impératif stratégique d'innovation et la préservation de son capital humain et de sa fiabilité. 
-
-Dès lors, la réflexion sera guidée par la problématique suivante : \textbf{L'intégration des outils d'intelligence artificielle générative dans le conseil : comment l'automatisation des tâches d'analyse redéfinit-elle la légitimité et le développement des compétences des consultants ?}
-
+\chapter{Introduction générale}
+\input{chapters/introduction.tex}
 \cleardoublepage{}
 
 % ==============================================================================
-% PARTIE 1 : CADRE THÉORIQUE
+% PREMIÈRE PARTIE — Contextualisation empirique et cadrage théorique
 % ==============================================================================
-\part{Cadre Théorique -- L’Expertise face à l’Automatisation}
+\part{Contextualisation empirique et cadrage théorique}
 
-\chapter{Les Sociétés de Conseil (KIFs) et le modèle de l'expert}
-\input{chapters/chapitre1.tex} % Idéalement, crée un sous-dossier "chapters"
+\chapter{Le terrain d'étude : Wavestone et la pratique du conseil cyber}
+\input{chapters/chapitre1.tex}
 
-\chapter{L'IA Générative comme technologie de rupture organisationnelle}
+\chapter{Cadrage conceptuel et discussion théorique}
 \input{chapters/chapitre2.tex}
 
 \cleardoublepage{}
 
 % ==============================================================================
-% PARTIE 2 : CADRE EMPIRIQUE
+% DEUXIÈME PARTIE — Méthodologie, résultats et recommandations
 % ==============================================================================
-\part{Cadre Empirique -- Méthodologie et Réalité du terrain}
-
-\chapter{Présentation du terrain et environnement macro-économique}
-%\input{chapters/chapitre3.tex}
+\part{Approche méthodologique, résultats et recommandations}
 
 \chapter{Démarche méthodologique qualitative}
-%\input{chapters/chapitre4.tex}
+\input{chapters/chapitre3.tex}
+
+\chapter{Restitution des données, analyse critique et recommandations managériales}
+\input{chapters/chapitre4.tex}
 
 \cleardoublepage{}
 
 % ==============================================================================
-% PARTIE 3 : ANALYSE ET RECOMMANDATIONS
+% CONCLUSION GÉNÉRALE
 % ==============================================================================
-\part{Analyse des Pratiques et Recommandations Managériales}
-
-\chapter{Analyse des résultats : L'IA au quotidien, entre opportunisme et vigilance}
-%\input{chapters/chapitre5.tex}
-
-\chapter{Recommandations stratégiques et RH pour le cabinet}
-%\input{chapters/chapitre6.tex}
-
+\chapter{Conclusion générale}
+\input{chapters/conclusion.tex}
 \cleardoublepage{}
 
 % ==============================================================================
-% CONCLUSION GENERALE
+% BIBLIOGRAPHIE
 % ==============================================================================
-\chapter{Conclusion Générale}
-% À rédiger en fin de parcours
+\renewcommand{\tocbibname}{Bibliographie}
+\nocite{*}                        % l'IAE demande de lister aussi les références non citées
+\bibliographystyle{apalike}       % style auteur-année, conforme aux citations (NOM, année)
+\bibliography{references}
+\cleardoublepage{}
 
+\listoftables                     % supprimer cette ligne s'il n'y a aucun tableau
 \cleardoublepage{}
 
 % ==============================================================================
-% BIBLIOGRAPHIE (Gérée proprement via un fichier .bib séparé)
-% ==============================================================================
-\renewcommand{\tocbibname}{Bibliographie / Webographie}
-\bibliography{references} % Crée un fichier references.bib dans ton projet
-\bibliographystyle{plain}
-
-\cleardoublepage{}
-
-% Index des figures et tableaux (Optionnel mais requis si tu en ajoutes)
-\listoffigures
-\cleardoublepage{}
-
-\listoftables
-\cleardoublepage{}
-
-% ==============================================================================
-% ANNEXES & RÉSUMÉS DE FIN
+% ANNEXES
 % ==============================================================================
 \appendix
-\part*{Annexes} 
-\addcontentsline{toc}{part}{Annexes} 
-\cleardoublepage{}
+\part*{Annexes}
+\addcontentsline{toc}{part}{Annexes}
 
 \chapter{Guide d'entretien semi-directif}
-%\input{chapters/annexe1.tex}
-
+\input{chapters/annexe1.tex}
 \cleardoublepage{}
+
+\chapter{Grille d'analyse thématique}
+\input{chapters/annexe2.tex}
+\cleardoublepage{}
+
+% ==============================================================================
+% TABLE DES MATIÈRES DÉTAILLÉE (consigne IAE : en fin de document)
+% Second appel rendu possible par le package etoc chargé dans le préambule.
+% ==============================================================================
+\begingroup
+\renewcommand{\contentsname}{Table des matières détaillée}
+\etocsetnexttocdepth{3}
+\tableofcontents
+\endgroup
+\cleardoublepage{}
+
+% ==============================================================================
+% RÉSUMÉS DE QUATRIÈME DE COUVERTURE
+% ==============================================================================
 \thispagestyle{empty}
 
-% Résumés réglementaires de quatrième de couverture (Consigne IAE)
 \section*{Résumé}
-\addcontentsline{toc}{chapter}{Résumé}
-Ce mémoire professionnel s'intéresse à l'impact de l'intégration des outils d'intelligence artificielle générative au sein des cabinets de conseil... [À compléter en fin de rédaction]
+Ce mémoire professionnel s'intéresse à... % [À compléter en fin de rédaction]
 
 \vspace{1cm}
-{\bf Mots-clés~:} Intelligence Artificielle Générative, Sociétés de Conseil, Gestion des Compétences, Bureaucratie Professionnelle, Légitimité.
+{\bf Mots-clés~:} Intelligence artificielle générative, sociétés de conseil, gestion des compétences, bureaucratie professionnelle, légitimité.
 
 \section*{Abstract}
-\addcontentsline{toc}{chapter}{Abstract}
-This professional thesis explores the impact of integrating generative artificial intelligence tools within management and IT consulting firms... [À compléter en fin de rédaction]
+This professional thesis explores... % [À compléter en fin de rédaction]
 
 \vspace{1cm}
-{\bf Keywords~:} Generative Artificial Intelligence, Management Consulting, Skills Management, Professional Bureaucracy, Legitimacy.
-
-\printSignatures
+{\bf Keywords~:} Generative artificial intelligence, management consulting, skills management, professional bureaucracy, legitimacy.
 
 \end{document}
