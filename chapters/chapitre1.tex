@@ -1,3 +1,440 @@
-section{À rédiger}
+% ==============================================================================
+% CHAPITRE 1 — Le terrain d'étude : Wavestone et la pratique du conseil cyber
+% Le \chapter{} est déclaré dans memoire.tex : ce fichier démarre en \section.
+% ==============================================================================
 
-Contenu à venir.
+\section{L'environnement de l'organisation : le marché du conseil en cybersécurité et en transformation numérique au Luxembourg}
+
+Un cabinet de conseil ne choisit pas librement la nature de ses missions. Il vend ce que
+son marché lui demande, et ce marché est lui-même façonné par la structure de l'économie
+locale et par le droit qui s'y applique. Décrire l'environnement de la practice
+Cybersécurité de Wavestone Luxembourg n'est donc pas un préalable de forme. C'est ce qui
+explique pourquoi les livrables y sont ce qu'ils sont, pourquoi les délais y sont
+contraints, et pourquoi la question de la fiabilité du contenu produit s'y pose avec une
+acuité particulière.
+
+\subsection{Une économie dont le centre de gravité est financier}
+
+Le Luxembourg présente une singularité rare en Europe : la concentration de son activité
+économique sur un secteur unique. Le secteur financier y représente environ 25~\% du
+produit intérieur brut et plus de 10~\% de l'emploi\footnote{Direction générale du Trésor,
+fiche « Situation économique et financière du Luxembourg », mise à jour du 21 avril 2026,
+\url{https://www.tresor.economie.gouv.fr/Pays/LU/situation-economique-et-financiere-du-luxembourg}.}.
+Aucune autre place européenne comparable ne présente un tel degré de spécialisation.
+
+Cette concentration a une conséquence directe sur le marché du conseil. La clientèle
+solvable y est, pour l'essentiel, constituée d'entités financières : établissements de
+crédit, gestionnaires de fonds, entreprises d'investissement, assureurs, auxquels
+s'ajoutent les institutions européennes implantées sur le territoire. Un cabinet qui
+s'installe au Luxembourg s'adresse mécaniquement à des organisations supervisées.
+
+Or une organisation supervisée n'achète pas du conseil comme une autre. Elle achète pour
+répondre à une obligation dont elle devra rendre compte devant une autorité. La commande
+comporte alors une exigence de traçabilité : le livrable doit pouvoir être opposé à un
+tiers. Cette caractéristique, propre au marché luxembourgeois plus qu'à d'autres, pèse sur
+tout le reste de l'analyse.
+
+\subsection{Deux textes européens qui déplacent la demande}
+
+La période récente a vu se refermer deux mouvements réglementaires distincts, tous deux
+adoptés le 14 décembre 2022 et publiés au même journal officiel.
+
+Le règlement dit DORA \cite{ue2022dora} organise la résilience opérationnelle numérique du
+secteur financier. Il est entré en application le 17 janvier 2025. Il impose aux entités
+financières de tenir un registre d'information sur leurs prestataires de services
+informatiques, de notifier les incidents majeurs, de conduire des tests de résilience et
+d'encadrer contractuellement leur chaîne de sous-traitance. Au Luxembourg, l'autorité de
+supervision a précisé que ces exigences prévalent désormais sur les éléments équivalents de
+ses propres circulaires antérieures, et a fixé une fenêtre de remise du registre
+d'information du 1\textsuperscript{er} au 15 avril 2025\footnote{Commission de surveillance
+du secteur financier, communiqué « Entry into application of DORA regulation on 17 January
+2025 »,
+\url{https://www.cssf.lu/en/2025/01/entry-in-application-of-dora-regulation-on-17-january-2025/}.}.
+Le point mérite d'être relevé : un règlement européen a substitué un référentiel commun à
+un corpus national de recommandations, dans un délai court, pour l'ensemble d'une place.
+
+La directive dite SRI 2, ou NIS 2 \cite{ue2022nis2}, poursuit un objectif voisin sur un
+périmètre bien plus large. Elle étend le champ des entités régulées à dix-huit secteurs et
+distingue entités essentielles et entités importantes. Sa transposition luxembourgeoise est
+récente : la loi du 5 mai 2026 concernant des mesures destinées à assurer un niveau élevé
+de cybersécurité est entrée en vigueur le 10 mai 2026, et confie la supervision à
+l'Institut luxembourgeois de régulation\footnote{Institut luxembourgeois de régulation,
+« Entrée en vigueur de la loi du 5 mai 2026 »,
+\url{https://www.ilr.lu/actualite/entree-en-vigueur-nis2/} ; texte publié au Journal
+officiel du Grand-Duché sous la référence Legilux
+\url{https://legilux.public.lu/eli/etat/leg/loi/2026/05/05/a225/jo}.}. Les entités
+concernées doivent s'enregistrer auprès de l'autorité, appliquer des mesures de gestion des
+risques et respecter des obligations de notification.
+
+Deux effets se combinent. DORA a densifié la demande chez des clients déjà régulés. NIS 2 a
+élargi le nombre d'organisations soumises à une obligation de sécurité. La demande de
+conseil ne croît donc pas seulement en volume : elle change de nature. Elle devient une
+demande d'attestation, de mise en conformité documentée et de préparation à un contrôle.
+
+La conformité n'épuise d'ailleurs pas la commande. Les mêmes textes ont pour effet
+d'attirer dans le périmètre du conseil des chantiers qui relèvent de la transformation
+numérique : externalisation de fonctions informatiques, recours à des services en nuage,
+contractualisation avec des prestataires tiers. DORA impose en effet aux entités
+financières de cartographier et d'encadrer leur chaîne de sous-traitance informatique. La
+conséquence est qu'un projet de modernisation ne peut plus être conduit indépendamment de
+sa dimension de sécurité, et qu'un même cabinet est sollicité sur les deux volets. Le
+marché du conseil en cybersécurité et celui du conseil en transformation numérique se sont
+ainsi partiellement recouverts.
+
+\subsection{Un contexte de menace qui légitime la dépense}
+
+L'agence européenne pour la cybersécurité observe un niveau de menace qui ne se réduit pas
+\cite{enisa2025}. Ce constat institutionnel joue un rôle précis dans l'économie du marché :
+il fournit aux directions générales l'argument qui transforme une dépense de conformité en
+dépense de protection. La réglementation crée l'obligation ; l'état de la menace en rend
+l'exécution défendable devant un conseil d'administration. Les deux ressorts se renforcent.
+
+\subsection{Un paysage concurrentiel dense et différencié}
+
+Le marché luxembourgeois du conseil en cybersécurité n'est pas un marché protégé. Trois
+familles d'acteurs s'y côtoient.
+
+Les grands réseaux d'audit et de conseil y disposent d'implantations anciennes et
+importantes, adossées à leur activité historique auprès des mêmes clients financiers. Les
+intégrateurs et opérateurs de services managés y vendent de l'exploitation plutôt que du
+conseil. Enfin, un tissu de sociétés spécialisées s'est constitué, dont une part
+significative est de création récente : un travail de cartographie publié en juillet 2026,
+conduit par Wavestone avec la Luxembourg House of Cybersecurity, recense vingt jeunes
+pousses actives dans le domaine, toutes fondées depuis 2020, et relève que les trois quarts
+d'entre elles mobilisent l'intelligence artificielle dans leur
+offre\footnote{Wavestone, « Luxembourg Cybersecurity Startup Radar 2026 », 20 juillet 2026,
+\url{https://www.wavestone.com/en/insight/luxembourg-cybersecurity-startup-radar-2026/}.}.
+
+Wavestone occupe dans cet ensemble une position intermédiaire : cabinet indépendant de
+taille européenne, sans activité d'audit légal ni d'exploitation, positionné sur le conseil
+et le pilotage. Cette position a une conséquence organisationnelle directe. Le cabinet ne
+peut se différencier ni par l'échelle ni par l'outillage. Il se différencie par la qualité
+du raisonnement livré. Ce que la practice vend est un jugement documenté, et c'est
+précisément cette matière que l'automatisation vient toucher.
+
+\subsection{Ce que la conformité fait au travail de conseil}
+
+Un dernier point mérite d'être explicité, car il conditionne toute la suite. La demande de
+conformité impose un régime de production particulier.
+
+Elle impose un calendrier exogène. Les échéances ne sont pas négociées avec le client :
+elles sont fixées par un texte ou par une autorité. Le délai devient une contrainte dure.
+
+Elle impose un format écrit. Une obligation ne se démontre pas oralement. Elle se prouve par
+un document, un registre, un rapport, une matrice. Le livrable est le produit, non son
+support.
+
+Elle impose enfin une exigence de justesse asymétrique. Une analyse approximative dans un
+document de conformité n'expose pas seulement le cabinet à une insatisfaction commerciale.
+Elle expose le client à un risque de sanction et le cabinet à un risque de réputation. Ces
+trois traits — vitesse imposée, écrit obligatoire, erreur coûteuse — définissent le cadre
+dans lequel les outils d'intelligence artificielle générative ont fait leur entrée.
+
+\section{La practice Cybersécurité de Wavestone : produire et contrôler de la valeur intellectuelle}
+
+\subsection{Le groupe et le bureau de Luxembourg}
+
+Wavestone est un cabinet de conseil indépendant, coté sur Euronext Paris. Il résulte du
+rapprochement, en 2016, du cabinet Solucom et des activités européennes de Kurt Salmon,
+puis d'une fusion avec Q\_PERIOR en 2023 qui a étendu son implantation en Allemagne, en
+Autriche et en Suisse. À la clôture de l'exercice arrêté au 31 mars 2026, le groupe
+déclarait 6~111 consultants dans dix-sept pays et un chiffre d'affaires consolidé de
+954,3~millions d'euros. Son offre couvre la stratégie des systèmes d'information, la
+cybersécurité, la donnée et l'intelligence artificielle, ainsi que les sujets industriels.
+Le détail de l'historique, du périmètre d'activité et de l'organisation du groupe est
+renvoyé en annexe, conformément à l'usage.
+
+Le bureau de Luxembourg a été ouvert en 2006. Il compte une cinquantaine de consultants,
+dont une vingtaine au sein de la practice Cybersécurité. La langue de travail y est mixte,
+français et anglais, ce qui constitue une contrainte de production rarement anodine
+lorsqu'un livrable doit être rédigé, relu et corrigé dans une langue qui n'est pas toujours
+la langue première de son auteur.
+
+La clientèle de la practice se compose principalement d'établissements financiers,
+d'assureurs et d'institutions européennes, auxquels s'ajoutent d'autres organisations
+privées. On retrouve ici, à l'échelle d'une équipe, la structure du marché décrite plus
+haut.
+
+\subsection{Une pyramide plate et deux régimes de staffing}
+
+L'observation conduite au sein de la practice fait apparaître une structure hiérarchique
+resserrée. Le corps de production compte entre dix et quinze personnes réparties entre les
+grades d'analyste, de consultant et de consultant senior. L'encadrement se limite à un
+manager et un senior manager.
+
+Ce rapport est déterminant. Un encadrement aussi léger signifie qu'un même manager suit
+simultanément plusieurs missions et arbitre le temps qu'il consacre à chacune. Le contrôle
+ne peut donc pas être exhaustif. Il est nécessairement sélectif, et cette sélectivité est
+un choix managérial permanent.
+
+Le staffing obéit à deux régimes distincts, qui coexistent dans la même équipe. Le premier
+est un régime d'immersion : un consultant est affecté à une ou deux missions, souvent
+directement chez le client, sur une durée longue. Le second est un régime de
+fractionnement : le consultant conduit quatre à cinq missions plus courtes, de taille
+réduite, exécutées depuis le bureau. La durée d'une mission n'est pas un indicateur
+significatif en soi, les missions les plus longues étant simplement celles qui absorbent le
+plus de temps.
+
+Ces deux régimes n'exposent pas au même risque. L'immersion favorise l'appropriation d'un
+contexte client unique et permet une vérification par la connaissance du terrain. Le
+fractionnement multiplie les changements de contexte dans une même journée et raccourcit le
+temps consacré à chaque pièce produite. Le second régime est, structurellement, celui où
+l'assistance automatisée est la plus tentante et le contrôle le plus difficile.
+
+\subsection{Le livrable comme unité de production}
+
+Quatre familles de missions structurent l'activité de la practice, et chacune produit un
+profil documentaire différent.
+
+\begin{itemize}
+  \item Les \textbf{audits} de sécurité donnent lieu à une production combinant tableurs de
+    relevé et rapport rédigé, dont le volume peut être considérable.
+  \item Les \textbf{exercices de gestion de crise} génèrent de nombreuses pièces à trois
+    moments distincts : lors de la préparation, pendant l'exercice, puis lors de l'analyse
+    qui le suit.
+  \item Les \textbf{projets de sécurité d'architecture} se concentrent sur un livrable
+    principal, accompagné de quelques documents secondaires.
+  \item Les missions de \textbf{pilotage de projet} produisent des livrables dont la nature
+    dépend entièrement du travail confié par le client.
+\end{itemize}
+
+Aucun volume chiffré n'a pu être établi et aucun n'est avancé ici. Ce qui importe pour
+l'analyse n'est pas la quantité mais la structure. Deux profils de production s'opposent.
+L'audit et l'exercice de crise reposent sur un grand nombre de pièces relativement
+standardisées, où l'effort marginal de rédaction est élevé et la valeur ajoutée par unité
+faible. L'architecture repose sur une pièce maîtresse, où la valeur est concentrée et la
+substitution difficile.
+
+Cette opposition est le premier élément de problématisation. La production documentaire de
+masse est précisément la zone où un outil génératif produit un gain immédiat et visible.
+C'est aussi, dans la logique d'apprentissage d'un cabinet, la zone par laquelle un junior
+entre dans le métier.
+
+À cette structure documentaire s'ajoute une contrainte propre au bureau de Luxembourg. La
+production s'effectue dans deux langues, et une part des livrables est rédigée par des
+consultants qui écrivent dans leur seconde langue. Le travail de mise au net — correction,
+reformulation, homogénéisation du registre — représente donc une charge réelle, distincte
+du travail d'analyse. Cette charge est sans valeur ajoutée pour le client, mais elle
+consomme du temps de production et du temps de relecture. Elle constitue, on le verra, le
+premier terrain d'adoption des outils génératifs dans l'équipe.
+
+\subsection{La revue en cascade : un contrôle par la connaissance du sujet}
+
+Le dispositif de revue qualité observé dans la practice comporte trois temps, et il repose
+sur une logique qu'il faut nommer précisément.
+
+La rédaction est confiée aux analystes et aux consultants, accompagnés d'un consultant
+senior. L'accompagnement est concomitant à la production, non postérieur.
+
+À l'approche de l'échéance, le consultant senior procède à la relecture. Sa fonction n'est
+pas de corriger à la place du rédacteur mais de guider la correction, en s'appuyant sur son
+expérience du sujet.
+
+La correction finale revient au manager en charge du projet, dont l'expérience plus large
+constitue le dernier filtre avant l'envoi au client.
+
+Trois observations s'imposent. D'abord, ce dispositif n'est pas une procédure formalisée :
+c'est une pratique, dont la robustesse tient aux personnes qui l'exercent. Ensuite, le
+contrôle repose sur la \emph{connaissance du sujet} et non sur une vérification
+systématique des sources : un relecteur détecte une erreur parce qu'il sait, non parce
+qu'il applique une grille. Enfin, ce dispositif a été conçu pour intercepter l'erreur
+humaine — l'inattention, le contresens, l'insuffisance de maturité du rédacteur. Rien
+n'indique qu'il ait été adapté à un type d'erreur différent.
+
+\subsection{L'apprentissage du junior, sous-produit de la production}
+
+Le mode d'intégration d'un junior dans la practice est indissociable du dispositif qui
+vient d'être décrit. La formation se fait sur les projets, par l'intermédiaire de collègues
+plus expérimentés. Ceux-ci épaulent le nouvel arrivant selon une alternance de travail
+conjoint et de travail solitaire, dans lequel la montée en compétence s'opère par
+confrontation directe à la difficulté. Des formations formelles sont disponibles et un
+budget leur est alloué, mais elles constituent un appoint, non le canal principal.
+
+Aucun parcours d'intégration structuré n'a été décrit. Ce point est signalé comme une
+information manquante et n'est pas comblé ici.
+
+Le mécanisme d'apprentissage est donc adossé à la production : le junior apprend en
+produisant, et il apprend surtout au moment où sa production est corrigée. La revue n'est
+pas seulement un contrôle qualité. Elle est le principal dispositif de transmission de
+l'équipe. Une firme intensive en connaissances tire son capital de l'expertise accumulée
+par ses membres \cite{starbuck1992} ; dans la practice observée, cette accumulation passe
+par le même canal que le contrôle du livrable.
+
+Ce constat porte en lui la tension centrale du mémoire. Si l'outil produit un premier jet
+acceptable, la correction devient plus légère. Le contrôle qualité peut s'en accommoder.
+La transmission, elle, perd son support.
+
+\section{L'irruption des outils d'intelligence artificielle au quotidien}
+
+\subsection{Un outil officiel, un encadrement placé à l'entrée}
+
+Le cabinet met officiellement à disposition un assistant génératif intégré à la suite
+bureautique utilisée par les équipes. C'est le seul outil homologué.
+
+L'encadrement associé est minimal et sa position est remarquable. Il n'existe pas de
+politique écrite d'usage. Le seul dispositif est une formation obligatoire, d'environ une
+heure, portant sur le fonctionnement général de ces technologies et sur quelques bonnes
+pratiques. Cette formation conditionne l'ouverture de l'accès à l'outil.
+
+L'encadrement porte donc sur l'\emph{entrée} dans l'usage, non sur l'usage lui-même. Une
+fois l'accès obtenu, le collaborateur est libre. Aucune règle n'indique quelles tâches
+peuvent être déléguées, quelles vérifications sont attendues, ni si le recours à l'outil
+doit être signalé au sein de l'équipe ou au client. Ce vide n'est pas un oubli : il traduit
+un choix implicite de faire confiance au jugement professionnel, cohérent avec le
+fonctionnement d'un cabinet où l'autonomie est la norme. Il en fait aussi porter la charge
+sur le seul collaborateur.
+
+L'agence européenne pour la cybersécurité a pris position sur les enjeux que soulève cette
+génération d'outils \cite{enisa2026}. L'existence d'une doctrine institutionnelle
+européenne contraste avec l'absence de doctrine interne, et situe l'observation au-delà du
+cas particulier.
+
+\subsection{Les tâches réellement concernées}
+
+Les usages observés dans l'équipe se répartissent sur quatre registres : la correction de
+textes, l'exécution d'actions répétitives dans les outils bureautiques, le traitement de
+données tabulaires, et, plus récemment, la production de supports de présentation.
+
+Cette liste appelle une lecture attentive, car elle dessine une frontière.
+
+Les trois premiers registres relèvent de la mise en forme et de la répétition. L'outil y
+prend en charge une tâche dont la valeur ajoutée est faible et dont le résultat est
+immédiatement vérifiable par celui qui la commande. Le risque y est limité.
+
+Le quatrième est d'une autre nature. Produire un support de présentation, dans un cabinet
+de conseil, n'est pas une opération de mise en forme : c'est une opération de structuration
+du raisonnement. L'ordre des messages, la hiérarchie des arguments, ce qui est mis en avant
+et ce qui est écarté constituent le cœur du travail intellectuel vendu au client. Le
+caractère récent de cet usage est donc significatif : le périmètre d'intervention de l'outil
+s'étend, et il s'étend en direction du livrable lui-même.
+
+\subsection{Des usages hors cadre, minoritaires mais attestés}
+
+Des usages hors du cadre officiel existent. Certaines personnes recourent à des assistants
+conversationnels grand public non homologués par le cabinet. Ces usages sont décrits comme
+minoritaires : la majorité de l'équipe se limite à l'outil autorisé et n'en fait pas un
+emploi imprudent.
+
+Ce constat doit être rapporté tel quel, sans amplification. Le terrain ne décrit pas une
+informatique parallèle massive. Il décrit une frange.
+
+Cette frange n'en est pas moins significative sur le plan managérial, pour deux raisons.
+D'une part, elle échappe entièrement au périmètre de la formation d'accès, seul dispositif
+d'encadrement existant. D'autre part, elle concerne des outils dont les conditions de
+traitement des données ne relèvent pas de l'environnement contractuel du cabinet, dans un
+secteur où la confidentialité des informations client est elle-même un objet de
+réglementation. La proportion importe moins que l'exposition.
+
+\subsection{L'erreur, sa cause et son rattrapage}
+
+Du contenu erroné produit par un outil a été observé et intercepté avant envoi au client.
+Trois éléments de ce constat méritent d'être retenus.
+
+La cause identifiée est le déficit de contexte. L'outil, insuffisamment informé de la
+situation, comble le manque en produisant un contenu plausible. L'erreur n'est donc pas
+aléatoire : elle est prévisible, et elle survient précisément là où le rédacteur a le moins
+d'éléments à fournir — c'est-à-dire, le plus souvent, là où il est lui-même le moins
+expérimenté.
+
+Le mode de détection est la revue. L'erreur est repérée en amont lors de la relecture par
+le consultant senior qui connaît réellement le sujet, ou à défaut par le manager.
+
+La conséquence logique est celle-ci : le contrôle de l'erreur machine repose intégralement
+sur un dispositif conçu pour l'erreur humaine, et sur la seule ressource qui n'est pas
+extensible dans une pyramide plate, à savoir le temps d'attention des deux ou trois
+personnes qui savent. Aucun contrôle spécifique n'a été mis en place. Aucune traçabilité du
+recours à l'outil n'est demandée. Le relecteur ignore, en règle générale, quelle partie du
+texte qu'il relit a été produite par une machine.
+
+\section{Problématisation managériale}
+
+\subsection{Trois frictions observées}
+
+Les observations rassemblées dans ce chapitre ne décrivent pas un dysfonctionnement. Elles
+décrivent une organisation qui fonctionne, et dont trois équilibres se trouvent déplacés
+par l'arrivée d'une technologie.
+
+\textbf{Première friction : la vitesse contre la vérification.} Le marché impose des
+échéances exogènes et une production documentaire volumineuse. L'outil réduit le temps de
+premier jet. Il ne réduit pas le temps de vérification — il l'augmente plutôt, puisqu'il
+faut désormais contrôler un texte que personne n'a raisonné. Le gain se situe donc en amont
+de la chaîne, le coût en aval, et les deux ne pèsent pas sur les mêmes personnes. Le
+rédacteur gagne du temps ; le relecteur en perd.
+
+\textbf{Deuxième friction : l'apprentissage contre la production.} Le junior apprend en
+rédigeant, puis en étant corrigé. Ces deux moments sont exactement ceux que l'outil
+allège. Un premier jet acceptable produit sans effort supprime la phase de tâtonnement, et
+une correction moins substantielle réduit le contenu pédagogique de la revue. La production
+n'en souffre pas dans l'immédiat. La constitution de l'expertise, si.
+
+\textbf{Troisième friction : l'autonomie contre le contrôle.} Le cabinet a choisi
+d'encadrer l'accès plutôt que l'usage, ce qui est cohérent avec l'autonomie professionnelle
+qui caractérise ce type d'organisation. Mais ce choix laisse sans réponse la question de la
+responsabilité du contenu. Le livrable engage le cabinet ; le recours à l'outil n'est ni
+déclaré, ni tracé, ni encadré au-delà d'une heure de sensibilisation.
+
+À ces trois frictions internes s'ajoute un mouvement externe. L'intelligence artificielle
+est devenue un objet de demande client, au point que le bureau constitue une équipe interne
+spécialisée sur le sujet. Le cabinet est donc simultanément utilisateur de la technologie
+dans sa production et vendeur d'expertise sur cette même technologie. Cette double position
+rend la question de la maîtrise interne plus exigeante encore, puisqu'elle devient un
+élément de crédibilité commerciale.
+
+Ces trois frictions ont un statut particulier qu'il convient d'énoncer. Elles procèdent
+d'une observation conduite en situation professionnelle sur une période de six mois, non
+d'une enquête formalisée. Elles décrivent ce qu'une position d'observateur permet de voir :
+des pratiques, un dispositif de production, l'absence d'un encadrement écrit. Elles ne
+disent rien de ce que les intéressés en pensent, ni de la manière dont chacun arbitre au
+moment de produire. C'est précisément cet écart entre la pratique observable et son
+interprétation par ceux qui l'exercent qui justifie le recours ultérieur à des entretiens.
+
+\subsection{De la friction à la question de recherche}
+
+Ces observations convergent vers un point unique. Ce qu'un cabinet de conseil vend n'est ni
+un document ni des heures : c'est un jugement dont il répond. Ce jugement fonde la
+confiance du client, et il se construit chez le consultant par l'exercice répété de la
+production sous contrôle d'un pair plus expérimenté.
+
+L'automatisation des tâches d'analyse touche ces deux dimensions par le même geste. Elle
+déplace la frontière entre ce que le consultant a effectivement raisonné et ce qu'il
+présente comme le résultat de son raisonnement — donc la base de sa légitimité. Et elle
+allège le travail par lequel il acquérait ce raisonnement — donc sa compétence future.
+
+Ce raisonnement conduit à la question centrale de recherche du présent mémoire :
+
+\begin{quote}
+\textbf{L'intégration des outils d'intelligence artificielle générative dans le conseil :
+comment l'automatisation des tâches d'analyse redéfinit-elle la légitimité et le
+développement des compétences des consultants ?}
+\end{quote}
+
+\subsection{Quatre questionnements directeurs}
+
+Cette question centrale se décompose en quatre questionnements, dont chacun découle d'une
+observation rapportée dans ce chapitre.
+
+\begin{enumerate}
+  \item \textbf{L'appropriation réelle.} De quelle manière les consultants s'approprient-ils
+    ces outils dans leurs tâches d'analyse quotidiennes ? L'extension récente des usages
+    vers les supports de présentation, comme la persistance d'une frange d'usages hors
+    cadre, montrent que l'appropriation ne se déduit pas de ce que l'organisation autorise.
+  \item \textbf{L'impact sur les compétences.} Quel effet cette automatisation produit-elle
+    sur l'apprentissage par la pratique et sur la trajectoire de montée en compétence des
+    juniors ? Dans une équipe où la formation passe par la production accompagnée, la
+    question n'est pas théorique.
+  \item \textbf{La légitimité de l'expert.} Comment l'autorité du consultant se
+    reconstruit-elle face au client lorsque la machine produit une part de la valeur
+    intellectuelle livrée ? Sur un marché de conformité, où le livrable doit être opposable
+    à une autorité, l'enjeu dépasse la satisfaction commerciale.
+  \item \textbf{La gouvernance et les risques.} Comment le management encadre-t-il l'usage
+    pour contenir le risque d'erreur et de divulgation d'information, sans brider une
+    autonomie qui est la condition même du fonctionnement de la practice ? Le dispositif
+    observé — une formation d'accès et une revue conçue pour l'erreur humaine — constitue le
+    point de départ de cette interrogation.
+\end{enumerate}
+
+Ces quatre questionnements appellent des cadres d'analyse que le chapitre suivant
+construit : la firme intensive en connaissances et son modèle de transmission, la
+fabrication de la légitimité professionnelle, et l'acceptation des technologies dans les
+organisations. Le chapitre 3 exposera ensuite le dispositif empirique par lequel ces
+questionnements ont été portés au terrain.
