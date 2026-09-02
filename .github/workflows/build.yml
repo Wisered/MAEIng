@@ -15,7 +15,7 @@ jobs:
       - name: Compiler le mémoire
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: "Mémoire MAE.tex"
+          root_file: "memoire.tex"
           # glossaries-extra est chargé par tnreport.cls avec automake=immediate,
           # qui appelle makeglossaries : il faut donc l'échappement shell.
           latexmk_shell_escape: true
@@ -28,5 +28,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: memoire-pdf
-          path: "Mémoire MAE.pdf"
+          path: "memoire.pdf"
           if-no-files-found: error
