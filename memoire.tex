@@ -33,7 +33,7 @@
 \def\reportAuthor{Arthur SAUNIER}
 \def\reportAuthorEmail{\email{arthur.saunier@telecomnancy.net}}
 
-\def\reportSupervisor{M. Riccardo BERGAMASCHI}        % tuteur professionnel
+\def\reportSupervisor{Mme Sevinç Özcan}        % tuteur professionnel
 \def\reportAcademicSupervisor{M. Ferri BRIQUET}       % tuteur pédagogique IAE
 \def\reportCompany{Wavestone Luxembourg}
 \def\reportCompanyCity{Luxembourg}
@@ -111,7 +111,30 @@
 \section*{Remerciements}
 \addcontentsline{toc}{chapter}{Remerciements}
 
-Je tiens à remercier tout particulièrement... % À compléter
+Mes remerciements vont d'abord à M. Ferri Briquet, tuteur pédagogique de ce mémoire, dont
+les orientations ont déterminé la structure de ce travail, à commencer par le choix d'un
+plan qui expose le terrain avant les cadres qui permettent de le lire.
+ 
+Je remercie Mme Sevinç Özcan, tuteur professionnel, ainsi que Riccardo Bergamaschi, qui a
+encadré ma mission au sein de la practice Cybersécurité de Wavestone Luxembourg, pour la
+confiance accordée tout au long de ces six mois.
+ 
+Ma reconnaissance va ensuite aux cinq consultants qui ont accepté de me consacrer du temps
+sur un sujet qui touche à leurs pratiques quotidiennes, et parfois à ce qu'elles ont
+d'inavoué. Ce mémoire n'existerait pas sans la franchise dont ils ont fait preuve.
+ 
+Je remercie enfin l'équipe pédagogique du Master Management et Administration des
+Entreprises de l'IAE Nancy, ainsi que TELECOM Nancy, pour avoir rendu possible ce double
+cursus.
+
+\vspace{2cm}
+\begin{flushright}
+\begin{minipage}{0.45\textwidth}
+Fait à Nancy, en \iaeDate\\[2cm]
+\reportAuthor
+\end{minipage}
+\end{flushright}
+
 
 \cleardoublepage{}
 
@@ -129,8 +152,12 @@ Je tiens à remercier tout particulièrement... % À compléter
 % ==============================================================================
 % INTRODUCTION GÉNÉRALE
 % ==============================================================================
-\chapter{Introduction générale}
+\chapter*{Introduction générale}
+\addcontentsline{toc}{chapter}{Introduction générale}
+\markboth{Introduction générale}{Introduction générale}
+\setcounter{secnumdepth}{0}
 \input{chapters/introduction.tex}
+\setcounter{secnumdepth}{3}
 \cleardoublepage{}
 
 % ==============================================================================
@@ -162,8 +189,12 @@ Je tiens à remercier tout particulièrement... % À compléter
 % ==============================================================================
 % CONCLUSION GÉNÉRALE
 % ==============================================================================
-\chapter{Conclusion générale}
+\chapter*{Conclusion générale}
+\addcontentsline{toc}{chapter}{Conclusion générale}
+\markboth{Conclusion générale}{Conclusion générale}
+\setcounter{secnumdepth}{0}
 \input{chapters/conclusion.tex}
+\setcounter{secnumdepth}{3}
 \cleardoublepage{}
 
 % ==============================================================================
@@ -210,15 +241,64 @@ Je tiens à remercier tout particulièrement... % À compléter
 \thispagestyle{empty}
 
 \section*{Résumé}
-Ce mémoire professionnel s'intéresse à... % [À compléter en fin de rédaction]
+
+Ce mémoire porte sur l'intégration des outils d'intelligence artificielle générative dans
+le travail d'analyse des consultants, et sur ce que cette intégration déplace dans la
+construction de leur expertise et dans la légitimité qu'ils engagent devant leurs clients.
+Le terrain est la practice Cybersécurité de Wavestone Luxembourg, où l'activité repose sur
+la production intensive de livrables écrits et où un assistant génératif a été déployé sans
+doctrine d'usage explicite.
+ 
+L'enquête repose sur cinq entretiens semi-directifs conduits auprès de deux positions de la
+chaîne de production du livrable, ceux qui rédigent et ceux qui contrôlent, et sur une
+analyse thématique de contenu mobilisant une grille mixte de cinquante-cinq codes.
+ 
+Quatre résultats se dégagent. Chaque consultant délimite une zone qu'il ne délègue pas, et
+cette frontière passe partout au même endroit~: là où un fait doit être justifié ou un
+contexte maîtrisé. Le temps gagné ne quitte pas la boucle de production, il se déplace de la
+rédaction vers la vérification. Les deux positions observent le même effet sur l'apprentissage
+des juniors sans jamais se le dire. Enfin, la relation entre junior et encadrant ne
+s'appauvrit pas comme la littérature le laissait attendre~: elle change d'objet, la revue se
+reportant de la forme sur la justification.
+ 
+Les recommandations proposées rendent la vérification déclarative, déplacent l'effort de
+formation vers la détection des erreurs et organisent le traitement des quasi-incidents,
+afin qu'un dispositif de contrôle cesse de n'évoluer que par l'accident.
 
 \vspace{1cm}
-{\bf Mots-clés~:} Intelligence artificielle générative, sociétés de conseil, gestion des compétences, bureaucratie professionnelle, légitimité.
+{\bf Mots-clés~:} intelligence artificielle générative, sociétés de conseil, apprentissage
+par la pratique, bureaucratie professionnelle, légitimité professionnelle, gouvernance des
+risques.
+
 
 \section*{Abstract}
-This professional thesis explores... % [À compléter en fin de rédaction]
+
+This thesis examines how consultants integrate generative artificial intelligence tools
+into their analytical work, and what this integration displaces in the way their expertise
+is built and in the legitimacy they stake before their clients. The field is the
+Cybersecurity practice of Wavestone Luxembourg, where the business rests on the intensive
+production of written deliverables and where a generative assistant has been deployed
+without any explicit doctrine of use.
+ 
+The study draws on five semi-structured interviews conducted across two positions in the
+deliverable production chain, those who write and those who review, and on a thematic
+content analysis based on a mixed grid of fifty-five codes.
+ 
+Four findings emerge. Every consultant sets a boundary they will not cross, and that
+boundary falls in the same place for all of them: wherever a fact must be justified or a
+context genuinely mastered. Time saved does not leave the production loop; it shifts from
+writing to verification. Both positions observe the same effect on junior learning without
+ever discussing it with one another. Finally, the junior-supervisor relationship does not
+erode as the literature would predict: it changes object, the review moving from form to
+justification.
+ 
+The recommendations make verification declarative, shift training from tool operation
+towards error detection, and organise the handling of near-misses, so that a control system
+no longer evolves only through accident.
 
 \vspace{1cm}
-{\bf Keywords~:} Generative artificial intelligence, management consulting, skills management, professional bureaucracy, legitimacy.
+{\bf Keywords~:} generative artificial intelligence, management consulting, learning by
+doing, professional bureaucracy, professional legitimacy, risk governance.
+
 
 \end{document}
