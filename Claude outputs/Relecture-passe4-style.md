@@ -939,3 +939,97 @@ Les trente-deux corrections ont été appliquées à une copie de travail, puis 
 - Aucun `«~…~»` n'est coupé par un saut de ligne du source qui ne l'était pas déjà.
 
 **Aucun fichier n'a été modifié.** La copie de travail a servi aux seules mesures ci-dessus.
+
+---
+
+## Validation après application — 8 septembre 2026, commit `0956f94`
+
+*Ajoutée après qu'Arthur a appliqué les trente-deux corrections. Le dépôt a été recompilé
+dans un environnement reproduisant le sien (mêmes deux `Overfull \hbox` au picomètre près
+dans les deux journaux).*
+
+### Conformité de l'application
+
+- Le texte du `chapitre4.tex` commité est **identique mot pour mot** à celui proposé.
+  Les trois seuls écarts sont des retours à la ligne (lignes 87, 133 et 176), sans effet
+  sur la sortie.
+- Le commit ne touche que `chapters/chapitre4.tex`, la présente note et `memoire.pdf`.
+  Aucun autre chapitre n'est modifié.
+- `---` dans `chapitre4.tex` : **4**, tous dans des titres de sous-section.
+
+### Pagination — cartographie tenue
+
+81 pages avant, 81 pages après. Position des titres dans le PDF, avant / après :
+
+| Élément | Avant | Après |
+|---|---|---|
+| 4.1 Restitution du matériau | 39 | 39 |
+| 4.1.1 Axe A | 39 | 39 |
+| Tableau 4.1 | 40 | 40 |
+| 4.1.2 Axe B | 41 | 41 |
+| 4.1.3 Axe C | 42 | 42 |
+| 4.1.4 Axe D | 42 | 42 |
+| 4.1.5 Les deux clivages | 43 | 43 |
+| 4.2 Confrontation aux cadres théoriques | 44 | 44 |
+| 4.2.3 La relation junior-encadrant | 45 | 45 |
+| 4.3 Recommandations managériales | 46 | 46 |
+| 4.3.1 Séquencer l'autorisation d'usage | 47 | 47 |
+| 4.3.4 Faire évoluer le dispositif | 48 | 48 |
+| 4.4 Limites des résultats | 48 | 48 |
+
+Aucun titre, aucun tableau, aucun numéro de page ne se déplace. Trois frontières de page
+seulement se décalent de quelques mots, à l'intérieur des pages 43, 48 et 49. **La
+cartographie de `claude/Relecture.md` reste exacte.**
+
+### Composition
+
+- **Débordements de marge : deux, inchangés, aucun dans le chapitre 4.** Le premier,
+  10,04 pt, est celui de `chapitre2.tex` lignes 24–37, déjà assumé à la passe 3 (la ligne
+  sur `[von Nordenflycht, 2010]`, page 22). Le second, 0,50 pt, est l'en-tête
+  «~Ancienneté~» d'un tableau de `chapitre3.tex` ligne 87 : 0,18 mm, invisible à
+  l'impression. *La note de passe 3 annonçait un seul débordement résiduel ; il y en a deux,
+  le second étant sous le seuil de visibilité. À corriger dans `Relecture.md` le jour où
+  cette note est mise à jour.*
+- **Une veuve en moins.** Avant la passe, la page 49 s'ouvrait sur la ligne isolée
+  «~reconstruit devant un client.~». La coupure de la correction n° 31 l'a fait remonter
+  en bas de page 48. Aucune veuve nouvelle n'apparaît sur les pages 6 à 53.
+
+### Deux formulations à reprendre — de moi, pas du matériau
+
+Ces deux corrections sont appliquées et compilent, mais je les ai relues et je propose mieux.
+Elles sont facultatives : le texte actuel n'est pas faux.
+
+---
+**33 — RECOMMANDÉ — `chapters/chapitre4.tex` — page 47**
+
+*AVANT* :
+```latex
+déterminent le succès. Le dispositif doit être déclaratif et non détectif~: il sert à
+signaler l'usage, non à le rechercher. Il doit être non punitif et énoncé
+```
+
+*APRÈS* :
+```latex
+déterminent le succès. Le dispositif doit être déclaratif et non détectif~: il sert à
+permettre le signalement de l'usage, non à le rechercher. Il doit être non punitif et énoncé
+```
+
+*Pourquoi* : ce n'est pas le dispositif qui signale mais le consultant, et « permettre » est le verbe que porte déjà la mesure d'E1 comme la conclusion page 53.
+
+---
+**34 — RECOMMANDÉ — `chapters/chapitre4.tex` — page 43**
+
+*AVANT* :
+```latex
+selon la position occupée. Le dispositif ne permet pas d'établir la conformité de ces
+pratiques. Le constat porte sur autre chose~: un cadre diversement interprété n'encadre pas.
+```
+
+*APRÈS* :
+```latex
+selon la position occupée. Statuer sur la conformité de ces pratiques dépasse ce que le
+dispositif permet d'établir. Le constat est autre~: un cadre diversement interprété
+n'encadre pas.
+```
+
+*Pourquoi* : la formulation d'origine refusait explicitement de juger, ce qui protège en soutenance ; ma première réécriture avait gardé la raison et perdu le refus, que « statuer » réintroduit.
