@@ -7,7 +7,7 @@
 % seconde page de titre, page de signatures) ne sont volontairement PAS appelées :
 % la page de garde suit le modèle imposé par l'IAE (cf. \makeIAEtitle ci-dessous).
 % ==============================================================================
-
+\PassOptionsToPackage{nottoc}{tocbibind}
 \documentclass{tnreport}
 % Option [stage3a] retirée : elle ne servait qu'à la page de titre Télécom.
 % \documentclass[confidential]{tnreport} % à activer si le mémoire est confidentiel
@@ -142,6 +142,7 @@ Fait à Nancy, en \iaeDate\\[2cm]
 % ------------------------------------------------------------------ Sommaire (1 page)
 % Consigne IAE : sommaire synthétique en une page au début, table détaillée à la fin.
 \begin{spacing}{1}                   % interligne simple pour tenir sur une page
+\small
 \etocsetnexttocdepth{0}              % parties et chapitres seulement
 \tableofcontents
 \end{spacing}
